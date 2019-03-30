@@ -1,0 +1,77 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "powershell"
+            },
+            "linux": {
+                "command": "gcc"
+            },
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+                "-I",
+                "${workspaceFolder}/include/"
+            ]
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "powershell"
+            },
+            "linux": {
+                "command": "make"
+            },
+            "args": [
+                "EXECUTABLE:='${fileBasenameNoExtension}'",
+                "SRC:='${file}'"
+            ]
+        },
+        {
+            "label": "build & run",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "powershell"
+            },
+            "linux": {
+                "command": "bash"
+            },
+            "args": [
+                "-c",
+                "'make run'"
+            ]
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "windows": {
+                "command": "powershell"
+            },
+            "linux": {
+                "command": "bash"
+            },
+            "args": [
+                "-c",
+                "'make clean'"
+            ]
+        }
+    ]
+}
