@@ -22,6 +22,6 @@ clean:
 run: all
 	./$(BIN)/$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(SRC)/*.c
+$(BIN)/$(EXECUTABLE): $(SRC)
 	$(CC) $(C_FLAGS) -I $(INCLUDE) -L $(LIB) $^ -o $@ $(LIBRARIES)
 

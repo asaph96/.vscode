@@ -5,3 +5,5 @@ src/clue.bmp
 src/copy.c
 src/main.c
 src/smiley.bmp
+.vscode/ipch/848dd9df25cb55aa/copy.ipch
+.vscode/ipch/848dd9df25cb55aa/mmap_address.bin

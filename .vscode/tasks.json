@@ -38,7 +38,7 @@
             },
             "args": [
                 "EXECUTABLE:='${fileBasenameNoExtension}'",
-                "SRC:='${fileDirname}'"
+                "SRC:='${file}'"
             ]
         },
         {
