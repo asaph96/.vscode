@@ -1,0 +1,7 @@
+bin/copy
+bin/main
+include/bmp.h
+src/clue.bmp
+src/copy.c
+src/main.c
+src/smiley.bmp
